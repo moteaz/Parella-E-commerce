@@ -12,7 +12,7 @@ const MobileNavbar = () => {
   return (
     <Sheet>
       <SheetTrigger>
-        <FaHamburger className="text-3xl cursor-pointer" />
+        <FaHamburger className="text-3xl cursor-pointer text-black" />
       </SheetTrigger>
       <SheetContent side="left">
         <SheetHeader>

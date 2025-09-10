@@ -26,7 +26,7 @@ const NavItems = ({mobile}: Props) => {
       <button className="nav-btn">Login</button>
 
       <div className="relative flex items-center h-[60px] w-[60px] justify-center cursor-pointer">
-        <FaCartShopping className="text-4xl" />
+  <FaCartShopping className="text-4xl text-black" />
 
         <span className="absolute top-0 right-0 px-2 py-1 bg-black rounded-full text-white">
           3
