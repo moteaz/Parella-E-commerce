@@ -3,7 +3,7 @@ import CartSummary from "@/Components/cart/CartSummary";
 import React from "react";
 
 const CartItemPage = () => {
-  const cartitems_count = 3;
+  // const cartitems_count = 3;
 
   return (
     <div className="main-max-width padding-x mx-auto py-9">
