@@ -7,7 +7,16 @@ import NavItems from "./NavItems";
 import MobileNavbar from "./MobileNavbar";
 import SearchButton from "./SearchButton";
 
-const NavBar = () => {
+interface User {
+  userProfile: {
+    name?: string | null | undefined;
+    email?: string | null | undefined;
+    image?: string | null | undefined;
+  } | null;
+}
+
+
+const NavBar = ({ userProfile }: User) => {
   const [showSearchForm, setShowSearchForm] = useState(false);
 
   const handleSearch = () => {
@@ -16,7 +25,7 @@ const NavBar = () => {
 
   return (
     <>
-      <nav className="bg-[whitesmoke] sticky top-0 z-20 w-full py-4"> 
+      <nav className="bg-[whitesmoke] sticky top-0 z-20 w-full py-4">
         <div className="flex justify-between items-center main-max-width mx-auto padding-x">
           <Link href="/">
             <h1 className="text-2xl font-extrabold text-gray-900">Parella</h1>
@@ -34,7 +43,7 @@ const NavBar = () => {
           </div>
 
           <div className="max-md:hidden">
-            <NavItems />
+            <NavItems userProfile={userProfile} />
           </div>
 
           <div className="max-md:block hidden">

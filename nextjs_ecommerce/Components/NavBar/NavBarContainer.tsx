@@ -1,10 +1,13 @@
 import React from 'react'
 import NavBar from './NavBar'
-
-const NavBarContainer = () => {
+import { auth } from '@/auth'
+const NavBarContainer = async () => {
+  const session = await auth()
+  const user = session?.user
+  if (!session?.user) return null
   return (
     <nav className="bg-[whitesmoke] sticky top-0 z-20 w-full py-4">
-        <NavBar />
+      <NavBar userProfile={user} />
     </nav>
   )
 }

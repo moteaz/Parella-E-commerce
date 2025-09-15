@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Ubuntu } from "next/font/google";
-import NavBar from "@/Components/NavBar/NavBar";
 import Footer from '../Components/footer/Footer'
+import NavBarContainer from "@/Components/NavBar/NavBarContainer";
 const ubuntu = Ubuntu({
-  weight: ["400", "500","700"], 
-  subsets: ["latin"] });
+  weight: ["400", "500", "700"],
+  subsets: ["latin"]
+});
 
 export const metadata: Metadata = {
   title: "Parella",
@@ -22,11 +23,11 @@ export default function RootLayout({
       <body className={ubuntu.className}
       >
         <main className="w-full">
-          <NavBar />
+          <NavBarContainer />
           {children}
-          <Footer/>
-          </main>
-        
+          <Footer />
+        </main>
+
       </body>
     </html>
   );
