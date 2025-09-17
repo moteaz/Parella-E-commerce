@@ -4,7 +4,6 @@ import { FaCartShopping } from "react-icons/fa6";
 import { cn } from "../../lib/utils";
 import Image from "next/image";
 import { logout, login } from "@/lib/action";
-import { Span } from "next/dist/trace";
 
 interface Props {
   mobile?: boolean;

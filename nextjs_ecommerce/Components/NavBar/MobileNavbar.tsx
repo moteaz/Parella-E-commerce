@@ -8,7 +8,15 @@ import {
 import { FaHamburger } from "react-icons/fa";
 import NavItems from "./NavItems";
 
-const MobileNavbar = () => {
+interface User {
+  userProfile: {
+    name?: string | null | undefined;
+    email?: string | null | undefined;
+    image?: string | null | undefined;
+  } | null;
+}
+
+const MobileNavbar = ({ userProfile }: User) => {
   return (
     <Sheet>
       <SheetTrigger>
@@ -21,7 +29,7 @@ const MobileNavbar = () => {
           </SheetTitle>
         </SheetHeader>
 
-        <NavItems mobile />
+        <NavItems mobile userProfile={userProfile} />
 
         {/* <SheetClose className="overflow-y-auto">
           <NavItems mobile />

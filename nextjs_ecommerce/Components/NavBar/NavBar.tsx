@@ -47,7 +47,7 @@ const NavBar = ({ userProfile }: User) => {
           </div>
 
           <div className="max-md:block hidden">
-            <MobileNavbar />
+            <MobileNavbar userProfile={userProfile} />
           </div>
         </div>
       </nav>
